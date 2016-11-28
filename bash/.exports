@@ -1,0 +1,14 @@
+# vim as default
+export EDITOR="nano"
+
+# Prefer US English and use UTF-8
+export LC_ALL="en_US.UTF-8"
+export LANG="en_US"
+
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+
+# WordPress Unit Tests
+export WP_TESTS_DIR=~/Workspace/WordPress/develop.git.wordpress.org/tests/phpunit
+
+# GlotPress Unit Tests
+export GP_TESTS_DIR=~/Workspace/GitHub/GlotPress-WP/tests/phpunit

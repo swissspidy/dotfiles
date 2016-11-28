@@ -1,0 +1,5 @@
+set linenumbers
+set backwards
+set autoindent
+set noconvert
+set tabsize 4

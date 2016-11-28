@@ -1,0 +1,74 @@
+# For easier navigation
+
+alias cd..="cd .."
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+
+# Better safe than sorry
+alias mv='mv -v'
+alias rm='rm -i -v'
+alias cp='cp -v'
+
+# Better `ls`
+alias l="ls"
+alias ll="ls -l"
+alias la="ls -a"
+alias lh="ls -lh"
+alias lah="ls -lah"
+
+# Files
+alias fs="stat -f \"%z bytes\""
+alias t="tail -F"
+
+# Trim new lines and copy to clipboard
+alias trimcopy="tr -d '\n' | pbcopy"
+
+# List processes
+alias paux="ps aux|grep -i"
+
+# Networking stuff
+# Networking. IP address, dig, DNS
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias wget="curl -O"
+
+alias hosts="open /etc/hosts -a Visual\ Studio\ Code.app";
+
+# advanced-ssh-config
+alias ssh="assh wrapper ssh"
+
+# Flush Directory Service cache
+alias flush="dscacheutil -flushcache"
+
+# Homebrew
+alias cask="brew cask"
+alias brwe=brew
+
+# Convenience
+alias logout="clear; logout"
+alias where="which"
+
+# Recursively delete `.DS_Store` files
+alias cleanup="find . -name '*.DS_Store' -type f -ls -delete"
+
+alias diskspace_report="df -P -kHl"
+
+# Update all the things
+alias brew_update="brew -v update; brew upgrade --force-bottle --cleanup; brew cleanup; brew cask cleanup; brew prune; brew doctor; npm-check -g -u"
+alias update_all="brew_update; mas upgrade; softwareupdate -i; npm install npm -g; npm update -g; sudo gem update --system; sudo gem update --no-document"
+
+# Git
+alias g="git"
+alias gti="git"
+alias status="git fetch && git status"
+alias master="git checkout master"
+
+# Undo a `git push`
+alias undopush="git push -f origin HEAD^:master"
+
+# Java
+
+alias setJdk6='export JAVA_HOME=$(/usr/libexec/java_home -v 1.6)'
+alias setJdk7='export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)'
+alias setJdk8='export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)'

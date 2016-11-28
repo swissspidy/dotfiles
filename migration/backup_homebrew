@@ -1,0 +1,20 @@
+#!/bin/bash
+
+$brew_command tap | while read tap;
+do
+  echo "brew tap $tap"
+done
+
+echo ""
+
+$brew_command list | while read item;
+do
+  echo "brew install $item"
+done
+
+echo ""
+
+$brew_cask_command list | while read item;
+do
+  echo "brew caks install $item"
+done

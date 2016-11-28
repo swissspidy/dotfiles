@@ -1,0 +1,18 @@
+# Linux
+*~
+
+# macOS
+._*
+.DS_Store
+.Trashes
+
+# Intellj
+.idea
+
+# Windows
+Thumbs.db
+
+# Miscellaneous
+*.pyc
+node_modules
+npm-debug.log

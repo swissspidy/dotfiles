@@ -1,0 +1,130 @@
+[alias]
+	c  = commit -am
+	up = pull
+	p  = push
+	s  = status
+	co = checkout
+	cp = cherry-pick
+	df = diff --color --color-words --abbrev
+	l  = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+
+	# Show the diff between the latest commit and the current state
+	d  = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
+
+	# See https://johnblackbourn.com/git-changelog-generator
+	changelog = "!_() { t=$(git describe --abbrev=0 --tags); git log ${t}..HEAD --no-merges --pretty=format:'* %s'; }; _"
+
+	# Save patch file to Desktop
+    patch = "!f() { \
+        git add . && git diff --cached > ~/Desktop/$1.diff; \
+    }; f"
+
+	# Find commits by source code.
+    cc = "!f() { \
+        git log --pretty=custom --decorate --date=short -S\"$1\"; \
+    }; f"
+
+	# Find commits by commit message.
+    cm = "!f() { \
+        git log --pretty=custom --decorate --date=short --grep=\"$1\"; \
+    }; f"
+
+	# Remove the tag with the specified tag name if exists and tag the latest commit with that name.
+    retag = "!f() { \
+        git tag -d "$1" &> /dev/null; \
+        git tag $1; \
+    }; f"
+[color]
+	ui = always
+
+[color "diff"]
+	meta = yellow bold
+	commit = green bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
+
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = "red bold 52"
+	newNormal = "green bold"
+	newHighlight = "green bold 22"
+
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan
+
+[commit]
+	gpgsign = true
+
+[core]
+	attributesfile = ~/.gitattributes
+	excludesfile = ~/.gitignore
+	autocrlf = false
+	editor = nano
+	pager = diff-so-fancy | less --tabs=4 -RFX
+
+[diff]
+	noprefix = true
+	mnemonicprefix = false
+	compactionHeuristic = true
+	tool = p4mergetool
+
+[difftool "p4mergetool"]
+	cmd = /Applications/p4merge.app/Contents/Resources/launchp4merge $LOCAL $REMOTE
+
+[fetch]
+	prune = true
+
+[gpg]
+	program = /usr/local/bin/gpg_wrap
+
+[help]
+	# correct typos
+	autocorrect = 1
+
+[merge]
+	tool = p4mergetool
+
+[mergetool "p4mergetool"]
+	cmd = /Applications/p4merge.app/Contents/Resources/launchp4merge $PWD/$BASE $PWD/$REMOTE $PWD/$LOCAL $PWD/$MERGED
+	trustExitCode = false
+
+[mergetool]
+	keepBackup = false
+
+[pretty]
+    custom = "%C(magenta)%h%C(red)%d %C(yellow)%ar %C(green)%s %C(yellow)(%an)"
+    #                     │        │            │            │             └─ author name
+    #                     │        │            │            └─ message
+    #                     │        │            └─ date (relative)
+    #                     │        └─ decorations (branch, heads or tags)
+    #                     └─ hash (abbreviated)
+
+[push]
+	# push easily. http://stackoverflow.com/a/23918418/89484
+	default = current
+	followTags = true
+
+[rebase]
+	autostash = true
+
+[stash]
+	showPatch = true
+
+[user]
+    # Don't guess the user's identity.
+    # https://github.com/git/git/blob/90f7b16b3adc78d4bbabbd426fb69aa78c714f71/Documentation/config.txt#L2847-L2855
+    useConfigOnly = true
+
+[include]
+	# use separate file for username / github token / etc.
+	# at the end so it can override any of the above configs
+	path = ~/.gitconfig.local

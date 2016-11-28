@@ -1,0 +1,17 @@
+{
+    "require": {
+        "phpmd/phpmd": "*",
+        "sebastian/phpcpd": "*",
+        "phpunit/phpunit": "*",
+        "squizlabs/php_codesniffer": "*",
+        "wp-coding-standards/wpcs": "*"
+    },
+    "require-dev": {
+        "phpunit/php-invoker": "*",
+        "phpunit/dbunit": "*"
+    },
+    "scripts": {
+        "post-install-cmd": "\"vendor/bin/phpcs\" --config-set installed_paths ~/.composer/vendor/wp-coding-standards/wpcs",
+        "post-update-cmd":  "\"vendor/bin/phpcs\" --config-set installed_paths ~/.composer/vendor/wp-coding-standards/wpcs"
+    }
+}

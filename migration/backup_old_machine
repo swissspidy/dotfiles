@@ -1,0 +1,22 @@
+#
+# Back up the old machine
+#
+# Note: copy paste this file in bit by bit. Don't run it.
+#
+echo "Do not run directly. Press Ctrl-C NOW!"
+read -n 1
+
+# What is worth reinstalling
+./backup_homebrew       > homebrew.txt
+./backup_mas            > mas.txt
+npm list -g --depth=0 	> npm-g-list.txt
+
+cp -R ~/.ssh ~/migration/home
+cp -R ~/.gnupg ~/migration/home
+
+# WiFi
+cp /Library/Preferences/SystemConfiguration/com.apple.airport.preferences.plist ~/migration
+
+cp -R ~/Documents ~/migration
+
+cp ~/.gitconfig.local ~/migration
