@@ -86,6 +86,7 @@ curl -O https://raw.githubusercontent.com/wp-cli/wp-cli/master/utils/wp-completi
 
 # Add symlinks
 (cd .. && stow bash)
+(cd .. && stow git)
 (cd .. && stow composer)
 
 # add manual symlink for assh config
