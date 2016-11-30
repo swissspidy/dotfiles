@@ -1,3 +1,4 @@
+bash/.extra
 bin/wp-completion.bash
 git/.gitconfig.local
 composer/.composer/auth.json
