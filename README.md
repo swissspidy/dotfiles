@@ -12,15 +12,11 @@ It's still work in progress, but it's already improved my workflow a lot so I fi
 
 ## Setup
 
-When switching computers, the following things need to be done on the old computer:
-
-Run `./migration/backup_homebrew` to get a list of installed brew packages. You can save the information to a bash file for example.
-
-Run `./migration/backup_mas`to get a list of installed apps from the Mac App Store. Note: This requires the `mas` utility available via homebrew.
-
-After that, check out `./migration/backup_old_machine` for some more commands to run on the old machine, step by step.
+When switching computers, check out `./migration/backup_old_machine` for some more commands to run on the old machine, step by step.
 
 On the new computer, copy the needed parts from `./migration/setup_new_machine` to install Xcode Command Line Tools, Homebrew, Composer, WP-CLI, et al. Use `./migration/configure_macos` to set some sensible OS defaults.
+
+For Homebrew, the `Brewfile` is used to install packages. Make sure you regularly update this file using `brew bundle dump --force`. This could take a moment, so use `brew bundle check` before hand.
 
 The `stow` command at the end symlinks the bash and Git configuration to the home directory. Check out [this blog post](brandon.invergo.net/news/2012-05-26-using-gnu-stow-to-manage-your-dotfiles.html) for more information about `stow`.
 

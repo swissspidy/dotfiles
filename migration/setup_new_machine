@@ -49,7 +49,9 @@ fi
 
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-# Install backed up formulas, see readme
+# Install backed up formulae
+brew tap Homebrew/bundle
+(cd .. && brew bundle)
 
 ################################################
 # Common

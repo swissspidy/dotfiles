@@ -1,7 +1,0 @@
-#!/bin/bash
-
-mas list | while read item;
-do
-  array=($item)
-  echo "mas install ${array[0]} # ${array[@]:1}"
-done
