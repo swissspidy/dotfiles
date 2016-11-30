@@ -1,10 +1,10 @@
 # Git
 
-function apply() {
-  patch -p0 -i $1;
+apply() {
+	patch -p0 -i $1;
 }
 
-function clone() {
+clone() {
     git clone --depth=1 $1
     cd $(basename ${1%.*})
     pull
@@ -12,11 +12,13 @@ function clone() {
 
 # cd into whatever is the forefront Finder window.
 cdf() {  # short for cdfinder
-  cd "`osascript -e 'tell app "Finder" to POSIX path of (insertion location as alias)'`"
+	cd "`osascript -e 'tell app "Finder" to POSIX path of (insertion location as alias)'`"
 }
 
+# Network
+
 # whois a domain or a URL
-function whois() {
+whois() {
 	local domain=$(echo "$1" | awk -F/ '{print $3}') # get domain from URL
 	if [ -z $domain ] ; then
 		domain=$1
@@ -29,7 +31,7 @@ function whois() {
 	/usr/bin/whois -h whois.internic.net $domain | sed '/NOTICE:/q'
 }
 
-function localip(){
+localip(){
 	function _localip(){ echo "📶  "$(ipconfig getifaddr "$1"); }
 	export -f _localip
 	local purple="\x1B\[35m" reset="\x1B\[m"
@@ -41,13 +43,13 @@ function localip(){
 }
 
 # preview csv files. source: http://stackoverflow.com/questions/1875305/command-line-csv-viewer
-function csvpreview(){
+csvpreview(){
       sed 's/,,/, ,/g;s/,,/, ,/g' "$@" | column -s, -t | less -#2 -N -S
 }
 
 # Extract archives - use: extract <file>
 # Based on http://dotfiles.org/~pseup/.bashrc
-function extract() {
+extract() {
 	if [ -f "$1" ] ; then
 		local filename=$(basename "$1")
 		local foldername="${filename%%.*}"
@@ -90,6 +92,6 @@ camerausedby() {
 }
 
 # direct it all to /dev/null
-function nullify() {
+nullify() {
   "$@" >/dev/null 2>&1
 }
