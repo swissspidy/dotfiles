@@ -33,7 +33,8 @@ alias paux="ps aux|grep -i"
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias wget="curl -O"
 
-alias hosts="open /etc/hosts -a Visual\ Studio\ Code.app";
+# need to add  `code` command in PATH, see https://code.visualstudio.com/docs/setup/mac
+alias hosts="code /etc/hosts";
 
 # advanced-ssh-config
 alias ssh="assh wrapper ssh"
