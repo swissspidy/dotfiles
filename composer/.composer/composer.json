@@ -4,7 +4,7 @@
         "sebastian/phpcpd": "*",
         "phpunit/phpunit": "*",
         "squizlabs/php_codesniffer": "*",
-        "wp-coding-standards/wpcs": "*"
+        "wp-coding-standards/wpcs": "dev-master"
     },
     "require-dev": {
         "phpunit/php-invoker": "*",
