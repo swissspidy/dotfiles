@@ -32,5 +32,10 @@ if  [ -f ~/dotfiles/bin/wp-completion.bash ]; then
     . ~/dotfiles/bin/wp-completion.bash;
 fi;
 
+# Wakatime
+if  [ -f ~/Workspace/GitHub/bash-wakatime/bash-wakatime.sh ]; then
+    . ~/Workspace/GitHub/bash-wakatime/bash-wakatime.sh;
+fi;
+
 # Autocorrect typos in path names when using `cd`
 shopt -s cdspell;
