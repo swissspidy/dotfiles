@@ -262,10 +262,7 @@ file=/Applications/Dropbox.app/Contents/Resources/emblem-dropbox-uptodate.icns
 
 # Expand the following File Info panes:
 # “General”, “Open with”, and “Sharing & Permissions”
-defaults write com.apple.finder FXInfoPanesExpanded -dict \
-	General -bool true \
-	OpenWith -bool true \
-	Privileges -bool true
+defaults write com.apple.finder FXInfoPanesExpanded -dict General -bool true OpenWith -bool true Privileges -bool true
 
 ################################################
 # Dock
@@ -657,7 +654,7 @@ echo "Setting f.lux preferences"
 FLUX_DOMAIN="org.herf.Flux"
 
 # Location, center of Thalwil, Zurich, Switzerland
-defaults write "${FLUX_DOMAIN}" location "47.377,8.52696"
+defaults write "${FLUX_DOMAIN}" location "47.2894,8.56708"
 defaults write "${FLUX_DOMAIN}" locationTextField "Thalwil, Switzerland"
 defaults write "${FLUX_DOMAIN}" locationType "L"
 
