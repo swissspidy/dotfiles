@@ -16,7 +16,7 @@
 
 	# Save patch file to Desktop
     patch = "!f() { \
-        git add . && git diff --cached > ~/Desktop/$1.diff; \
+        git add . && git diff --cached --no-color > ~/Desktop/$1.diff; \
     }; f"
 
 	# Find commits by source code.
