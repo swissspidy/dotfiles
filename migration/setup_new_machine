@@ -74,7 +74,7 @@ curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.pha
 chmod +x wp-cli.phar
 sudo mv wp-cli.phar /usr/local/bin/wp
 
-curl -O https://raw.githubusercontent.com/wp-cli/wp-cli/master/utils/wp-completion.bash > ../bin/wp-completion.bash
+curl -o ../bin/wp-completion.bash https://raw.githubusercontent.com/wp-cli/wp-cli/master/utils/wp-completion.bash
 
 # Install Composer
 ./install_composer
