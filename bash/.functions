@@ -95,3 +95,15 @@ camerausedby() {
 nullify() {
   "$@" >/dev/null 2>&1
 }
+
+# measure time to first byte
+# source: https://gist.github.com/acdha/1402514
+ttfb() {
+	while (($#)); do
+		echo $1
+		curl -so /dev/null -H "Pragma: no-cache" -H "Cache-Control: no-cache" \
+			-w "%{http_code}\tPre-Transfer: %{time_pretransfer}\tStart Transfer: %{time_starttransfer}\tTotal: %{time_total}\tSize: %{size_download}\n" \
+			"$1?`date +%s`"
+		shift
+	done
+}
