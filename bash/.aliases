@@ -68,6 +68,10 @@ alias master="git checkout master"
 # Undo a `git push`
 alias undopush="git push -f origin HEAD^:master"
 
+# Subversion
+alias sup="svn up --ignore-externals"
+alias svnclean="svn revert -R * && find . -name \"*.orig\" -delete && find . -name \"*.rej\" -delete && sup"
+
 # Java
 
 alias setJdk6='export JAVA_HOME=$(/usr/libexec/java_home -v 1.6)'
