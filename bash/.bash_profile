@@ -22,8 +22,13 @@ if  which brew > /dev/null && [ -f "$(brew --prefix)/share/bash-completion/bash_
   . "$(brew --prefix)/share/bash-completion/bash_completion";
 fi;
 
+# Git completion
+if which brew > /dev/null && [ -f "$(brew --prefix)/etc/bash_completion.d/git-completion.bash" ]; then
+    . "$(brew --prefix)/etc/bash_completion.d/git-completion.bash";
+fi
+
 # hub completion
-if  which hub > /dev/null; then
+if which brew > /dev/null && which hub > /dev/null; then
     . "$(brew --prefix)/etc/bash_completion.d/hub.bash_completion.sh";
 fi;
 
