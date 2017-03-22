@@ -2,7 +2,7 @@
     "require": {
         "phpmd/phpmd": "*",
         "sebastian/phpcpd": "*",
-        "phpunit/phpunit": "*",
+        "phpunit/phpunit": "~5.0",
         "squizlabs/php_codesniffer": "*",
         "wp-coding-standards/wpcs": "dev-master"
     },
