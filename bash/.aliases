@@ -70,7 +70,8 @@ alias undopush="git push -f origin HEAD^:master"
 
 # Subversion
 alias sup="svn up --ignore-externals"
-alias svnclean="svn revert -R * && find . -name \"*.orig\" -delete && find . -name \"*.rej\" -delete && sup"
+alias vcsclean="find . -name \"*.orig\" -delete && find . -name \"*.rej\" -delete"
+alias svnclean="svn revert -R * && vcsclean && sup"
 
 # Java
 
