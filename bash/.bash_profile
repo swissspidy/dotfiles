@@ -42,5 +42,10 @@ if  [ -f ~/Workspace/GitHub/bash-wakatime/bash-wakatime.sh ]; then
     . ~/Workspace/GitHub/bash-wakatime/bash-wakatime.sh;
 fi;
 
+# rupa/z
+if which brew > /dev/null && [ -f "$(brew --prefix)/etc/profile.d/z.sh" ]; then
+    . "$(brew --prefix)/etc/profile.d/z.sh";
+fi
+
 # Autocorrect typos in path names when using `cd`
 shopt -s cdspell;
