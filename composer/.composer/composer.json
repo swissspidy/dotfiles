@@ -2,16 +2,16 @@
     "require": {
         "phpmd/phpmd": "*",
         "sebastian/phpcpd": "*",
-        "phpunit/phpunit": "~5.0",
+        "phpunit/phpunit": "*",
         "squizlabs/php_codesniffer": "*",
-        "wp-coding-standards/wpcs": "dev-master"
+        "wp-coding-standards/wpcs": "dev-develop",
+        "behat/behat": "^3.3",
+        "wearerequired/composer-scripts": "^1.0",
+        "wimg/php-compatibility": "^8.0",
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.4.3"
     },
     "require-dev": {
         "phpunit/php-invoker": "*",
         "phpunit/dbunit": "*"
-    },
-    "scripts": {
-        "post-install-cmd": "\"vendor/bin/phpcs\" --config-set installed_paths ~/.composer/vendor/wp-coding-standards/wpcs",
-        "post-update-cmd":  "\"vendor/bin/phpcs\" --config-set installed_paths ~/.composer/vendor/wp-coding-standards/wpcs"
     }
 }
