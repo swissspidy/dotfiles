@@ -3,10 +3,16 @@
 	up = pull
 	p  = push
 	s  = status
+	st = status
 	co = checkout
 	cp = cherry-pick
 	df = diff --color --color-words --abbrev
 	l  = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+	ls = ls-files
+	undo = reset --soft HEAD^
+	amend = commit --amend
+	unstage = reset HEAD
+	commits-per-user = shortlog -s -n
 
 	# Show the diff between the latest commit and the current state
 	d  = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
