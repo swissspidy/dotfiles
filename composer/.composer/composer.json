@@ -1,14 +1,18 @@
 {
+    "config": {
+        "sort-packages": true
+    },
     "require": {
+        "behat/behat": "~2.5",
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.4.3",
+        "hirak/prestissimo": "^0.3.7",
         "phpmd/phpmd": "*",
-        "sebastian/phpcpd": "*",
         "phpunit/phpunit": "*",
+        "sebastian/phpcpd": "*",
         "squizlabs/php_codesniffer": "*",
-        "wp-coding-standards/wpcs": "dev-develop",
-        "behat/behat": "^3.3",
-        "wearerequired/composer-scripts": "^1.0",
+        "wearerequired/composer-scripts": "dev-master",
         "wimg/php-compatibility": "^8.0",
-        "dealerdirect/phpcodesniffer-composer-installer": "^0.4.3"
+        "wp-coding-standards/wpcs": "dev-develop"
     },
     "require-dev": {
         "phpunit/php-invoker": "*",
