@@ -37,6 +37,11 @@ if  [ -f ~/dotfiles/bin/wp-completion.bash ]; then
     . ~/dotfiles/bin/wp-completion.bash;
 fi;
 
+# Appflow completion
+if  [ -f ~/.appflow_completion ]; then
+    . ~/.appflow_completion;
+fi;
+
 # Wakatime
 if  [ -f ~/Workspace/GitHub/bash-wakatime/bash-wakatime.sh ]; then
     . ~/Workspace/GitHub/bash-wakatime/bash-wakatime.sh;
