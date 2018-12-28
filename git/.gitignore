@@ -16,3 +16,6 @@ Thumbs.db
 *.pyc
 node_modules
 npm-debug.log
+
+# Log files
+*.log
