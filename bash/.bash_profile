@@ -57,5 +57,9 @@ if which brew > /dev/null && [ -f "$(brew --prefix)/etc/profile.d/z.sh" ]; then
     . "$(brew --prefix)/etc/profile.d/z.sh";
 fi
 
+# nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
 # Autocorrect typos in path names when using `cd`
 shopt -s cdspell;
