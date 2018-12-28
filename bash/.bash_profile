@@ -42,6 +42,11 @@ if  [ -f ~/.appflow_completion ]; then
     . ~/.appflow_completion;
 fi;
 
+# Heroku completion
+if  [ -f ~/Library/Caches/heroku/autocomplete/bash_setup ]; then
+    . ~/Library/Caches/heroku/autocomplete/bash_setup;
+fi;
+
 # Wakatime
 if  [ -f ~/Workspace/GitHub/bash-wakatime/bash-wakatime.sh ]; then
     . ~/Workspace/GitHub/bash-wakatime/bash-wakatime.sh;
