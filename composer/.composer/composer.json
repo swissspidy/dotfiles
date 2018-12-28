@@ -1,21 +1,24 @@
 {
+    "name": "Global Composer Packages",
     "config": {
+        "process-timeout": 7200,
         "sort-packages": true
     },
+    "prefer-stable": true,
+    "minimum-stability": "dev",
     "require": {
         "behat/behat": "~2.5",
         "dealerdirect/phpcodesniffer-composer-installer": "^0.4.3",
+        "fig-r/psr2r-sniffer": "^0.5.0",
         "hirak/prestissimo": "^0.3.7",
-        "phpmd/phpmd": "*",
-        "phpunit/phpunit": "*",
-        "sebastian/phpcpd": "*",
-        "squizlabs/php_codesniffer": "*",
+        "localheinz/composer-normalize": "^0.8.0",
+        "phpcompatibility/phpcompatibility-wp": "^1.0",
+        "phpmd/phpmd": "^2.6",
+        "phpunit/phpunit": "^6",
         "wearerequired/composer-scripts": "dev-master",
         "wimg/php-compatibility": "^8.0",
-        "wp-coding-standards/wpcs": "dev-develop"
+        "wp-coding-standards/wpcs": "^1.0"
     },
     "require-dev": {
-        "phpunit/php-invoker": "*",
-        "phpunit/dbunit": "*"
     }
 }
