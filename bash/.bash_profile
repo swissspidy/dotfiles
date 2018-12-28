@@ -6,7 +6,7 @@ for file in ~/.{extra,bash_prompt,exports,aliases,functions}; do
 done
 unset file
 
-# added by travis gem
+# Travis CI gem.
 [ -f ~/.travis/travis.sh ] && . ~/.travis/travis.sh
 
 # Load the default .profile
