@@ -100,7 +100,7 @@
 	prune = true
 
 [gpg]
-	program = /usr/local/bin/gpg_wrap
+	program = /usr/local/bin/gpg
 
 [help]
 	# correct typos
