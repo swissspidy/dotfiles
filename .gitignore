@@ -1,4 +1,6 @@
 bash/.extra
 bin/wp-completion.bash
 git/.gitconfig.local
-composer/.composer/auth.json
+/composer/.composer
+!composer/.composer/composer.json
+!composer/.composer/config.json
