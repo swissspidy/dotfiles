@@ -1,5 +1,5 @@
 {
-    "name": "Global Composer Packages",
+    "name": "swissspidy/composer",
     "config": {
         "process-timeout": 7200,
         "sort-packages": true
@@ -11,12 +11,12 @@
         "dealerdirect/phpcodesniffer-composer-installer": "^0.4.3",
         "fig-r/psr2r-sniffer": "^0.5.0",
         "hirak/prestissimo": "^0.3.7",
-        "localheinz/composer-normalize": "^0.8.0",
-        "phpcompatibility/phpcompatibility-wp": "^1.0",
+        "localheinz/composer-normalize": "^1.0",
+        "phpcompatibility/phpcompatibility-wp": "^2.0",
         "phpmd/phpmd": "^2.6",
-        "phpunit/phpunit": "^6",
+        "phpunit/phpunit": "^7",
         "wearerequired/composer-scripts": "dev-master",
-        "wimg/php-compatibility": "^8.0",
+        "phpcompatibility/php-compatibility": "^9.0",
         "wp-coding-standards/wpcs": "^1.0"
     },
     "require-dev": {
