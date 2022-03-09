@@ -40,16 +40,9 @@
         git tag -d "$1" &> /dev/null; \
         git tag $1; \
     }; f"
-	append = town append
-	hack = town hack
-	kill = town kill
-	new-pull-request = town new-pull-request
-	prepend = town prepend
-	prune-branches = town prune-branches
-	rename-branch = town rename-branch
-	repo = town repo
-	ship = town ship
-	sync = town sync
+
+	# Squash the last N commits together.
+	squash = "!f(){ git reset --soft HEAD~${1} && git commit --edit -m\"$(git log --format=%B --reverse HEAD..HEAD@{1})\"; };f"
 [color]
 	ui = always
 
@@ -146,3 +139,12 @@
 	# use separate file for username / github token / etc.
 	# at the end so it can override any of the above configs
 	path = ~/.gitconfig.local
+[pull]
+	rebase = true
+
+[url "git@github.com:"]
+	pushInsteadOf = "https://github.com/"
+
+[url "https://github.com/"]
+	pullInsteadOf = "git@github.com":
+
