@@ -37,7 +37,9 @@ alias wget="curl -O"
 alias hosts="code /etc/hosts";
 
 # advanced-ssh-config
-alias ssh="assh wrapper ssh"
+if [ -x "$(command -v assh)" ]; then
+    alias ssh="assh wrapper ssh"
+fi;
 
 # Flush Directory Service cache
 alias flush="dscacheutil -flushcache"
