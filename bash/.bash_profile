@@ -6,6 +6,10 @@ for file in ~/.{extra,bash_prompt,exports,aliases,functions}; do
 done
 unset file
 
+# Hide bash -> zsh warning
+# TODO: switch to zsh completely, using chsh -s /bin/zsh
+export BASH_SILENCE_DEPRECATION_WARNING=1
+
 # Travis CI gem.
 [ -f ~/.travis/travis.sh ] && . ~/.travis/travis.sh
 
