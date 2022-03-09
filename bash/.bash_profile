@@ -16,34 +16,14 @@ export BASH_SILENCE_DEPRECATION_WARNING=1
 # Load the default .profile
 [[ -s "$HOME/.profile" ]] && . "$HOME/.profile"
 
-# Homebrew completion
-if  which brew > /dev/null; then
-    . "$(brew --prefix)/etc/bash_completion.d/brew"
-fi;
-
 # Bash completion
-if  which brew > /dev/null && [ -f "$(brew --prefix)/share/bash-completion/bash_completion" ]; then
-  . "$(brew --prefix)/share/bash-completion/bash_completion";
-fi;
-
-# Git completion
-if which brew > /dev/null && [ -f "$(brew --prefix)/etc/bash_completion.d/git-completion.bash" ]; then
-    . "$(brew --prefix)/etc/bash_completion.d/git-completion.bash";
-fi
-
-# hub completion
-if which brew > /dev/null && which hub > /dev/null; then
-    . "$(brew --prefix)/etc/bash_completion.d/hub.bash_completion.sh";
+if which brew > /dev/null && [ -f "$(brew --prefix)/etc/bash_completion" ]; then
+    . $(brew --prefix)/etc/bash_completion
 fi;
 
 # WP-CLI completion
 if  [ -f ~/dotfiles/bin/wp-completion.bash ]; then
     . ~/dotfiles/bin/wp-completion.bash;
-fi;
-
-# Appflow completion
-if  [ -f ~/.appflow_completion ]; then
-    . ~/.appflow_completion;
 fi;
 
 # Heroku completion
