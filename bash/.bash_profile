@@ -41,6 +41,15 @@ if which brew > /dev/null && [ -f "$(brew --prefix)/etc/profile.d/z.sh" ]; then
     . "$(brew --prefix)/etc/profile.d/z.sh";
 fi
 
+# Google Cloud SDK
+if  [ -f /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc ]; then
+    . /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc
+fi;
+
+if  [ -f /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc ]; then
+    . /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc
+fi;
+
 # nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
