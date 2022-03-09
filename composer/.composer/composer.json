@@ -1,24 +1,20 @@
 {
-    "name": "Global Composer Packages",
+    "name": "swissspidy/global-packages",
+    "require": {
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.7.0",
+        "ergebnis/composer-normalize": "^2.11",
+        "psy/psysh": "@stable",
+        "wearerequired/composer-scripts": "^0.2.0"
+    },
     "config": {
         "process-timeout": 7200,
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "ergebnis/composer-normalize": true,
+            "wearerequired/composer-scripts": true
+        }
     },
-    "prefer-stable": true,
     "minimum-stability": "dev",
-    "require": {
-        "behat/behat": "~2.5",
-        "dealerdirect/phpcodesniffer-composer-installer": "^0.4.3",
-        "fig-r/psr2r-sniffer": "^0.5.0",
-        "hirak/prestissimo": "^0.3.7",
-        "localheinz/composer-normalize": "^0.8.0",
-        "phpcompatibility/phpcompatibility-wp": "^1.0",
-        "phpmd/phpmd": "^2.6",
-        "phpunit/phpunit": "^6",
-        "wearerequired/composer-scripts": "dev-master",
-        "wimg/php-compatibility": "^8.0",
-        "wp-coding-standards/wpcs": "^1.0"
-    },
-    "require-dev": {
-    }
+    "prefer-stable": true
 }
