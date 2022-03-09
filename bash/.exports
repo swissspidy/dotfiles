@@ -7,15 +7,9 @@ export LANG="en_US"
 
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
-# WordPress Unit Tests
-export WP_TESTS_DIR=~/Workspace/WordPress/develop.git.wordpress.org/tests/phpunit
-
-# GlotPress Unit Tests
-export GP_TESTS_DIR=~/Workspace/GitHub/GlotPress-WP/tests/phpunit
-
-# Java
-export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
-
 # Subversion
 export SVN_EDITOR="nano"
 export SVN_MERGE="/Users/Pascal/dotfiles/bin/svn-p4merge.bash"
+
+# Go
+export GOPATH=$HOME/go
