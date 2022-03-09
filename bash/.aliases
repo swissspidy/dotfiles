@@ -66,6 +66,8 @@ alias g="git"
 alias gti="git"
 alias status="git fetch && git status"
 alias master="git checkout master"
+alias main="git checkout main"
+alias trunk="git checkout trunk"
 
 # Undo a `git push`
 alias undopush="git push -f origin HEAD^:master"
