@@ -135,10 +135,6 @@
 	name = Pascal Birchler
 	email = hello@pascalbirchler.ch
 
-[include]
-	# use separate file for username / github token / etc.
-	# at the end so it can override any of the above configs
-	path = ~/.gitconfig.local
 [pull]
 	rebase = true
 
@@ -148,3 +144,7 @@
 [url "https://github.com/"]
 	pullInsteadOf = "git@github.com":
 
+[include]
+	# use separate file for username / github token / etc.
+	# at the end so it can override any of the above configs
+	path = ~/.gitconfig.local

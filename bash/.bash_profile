@@ -10,9 +10,6 @@ unset file
 # TODO: switch to zsh completely, using chsh -s /bin/zsh
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
-# Travis CI gem.
-[ -f ~/.travis/travis.sh ] && . ~/.travis/travis.sh
-
 # Load the default .profile
 [[ -s "$HOME/.profile" ]] && . "$HOME/.profile"
 
@@ -24,11 +21,6 @@ fi;
 # WP-CLI completion
 if  [ -f ~/dotfiles/bin/wp-completion.bash ]; then
     . ~/dotfiles/bin/wp-completion.bash;
-fi;
-
-# Heroku completion
-if  [ -f ~/Library/Caches/heroku/autocomplete/bash_setup ]; then
-    . ~/Library/Caches/heroku/autocomplete/bash_setup;
 fi;
 
 # Wakatime
@@ -49,10 +41,6 @@ fi;
 if  [ -f /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc ]; then
     . /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc
 fi;
-
-# nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
 # Autocorrect typos in path names when using `cd`
 shopt -s cdspell;
