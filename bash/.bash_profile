@@ -42,5 +42,10 @@ if [ -f /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.
     . /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc
 fi;
 
+# nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
 # Autocorrect typos in path names when using `cd`
 shopt -s cdspell;
