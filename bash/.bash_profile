@@ -19,12 +19,12 @@ if which brew > /dev/null && [ -f "$(brew --prefix)/etc/bash_completion" ]; then
 fi;
 
 # WP-CLI completion
-if  [ -f ~/dotfiles/bin/wp-completion.bash ]; then
+if [ -f ~/dotfiles/bin/wp-completion.bash ]; then
     . ~/dotfiles/bin/wp-completion.bash;
 fi;
 
 # Wakatime
-if  [ -f ~/Workspace/GitHub/bash-wakatime/bash-wakatime.sh ]; then
+if [ -f ~/Workspace/GitHub/bash-wakatime/bash-wakatime.sh ]; then
     . ~/Workspace/GitHub/bash-wakatime/bash-wakatime.sh;
 fi;
 
@@ -34,11 +34,11 @@ if which brew > /dev/null && [ -f "$(brew --prefix)/etc/profile.d/z.sh" ]; then
 fi
 
 # Google Cloud SDK
-if  [ -f /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc ]; then
+if [ -f /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc ]; then
     . /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc
 fi;
 
-if  [ -f /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc ]; then
+if [ -f /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc ]; then
     . /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc
 fi;
 
