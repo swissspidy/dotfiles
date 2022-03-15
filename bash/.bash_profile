@@ -19,9 +19,16 @@ if which brew > /dev/null && [ -f "$(brew --prefix)/etc/bash_completion" ]; then
 fi;
 
 # WP-CLI completion
+# From https://raw.githubusercontent.com/wp-cli/wp-cli/master/utils/wp-completion.bash
 if [ -f ~/dotfiles/bin/wp-completion.bash ]; then
     . ~/dotfiles/bin/wp-completion.bash;
 fi;
+
+# Git completion
+# From https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
+if [ -f ~/dotfiles/bin/git-completion.bash ]; then
+  . ~/dotfiles/bin/git-completion.bash
+fi
 
 # Wakatime
 if [ -f ~/Workspace/GitHub/bash-wakatime/bash-wakatime.sh ]; then
