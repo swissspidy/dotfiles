@@ -89,6 +89,9 @@
 [difftool "p4mergetool"]
 	cmd = /Applications/p4merge.app/Contents/Resources/launchp4merge $LOCAL $REMOTE
 
+[diff "podiff"]
+	command = /opt/homebrew/bin/podiff -D-u -L
+
 [fetch]
 	prune = true
 
