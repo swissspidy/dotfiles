@@ -15,6 +15,10 @@ cdf() {  # short for cdfinder
 	cd "`osascript -e 'tell app "Finder" to POSIX path of (insertion location as alias)'`"
 }
 
+main() {
+	git checkout $(git symbolic-ref refs/remotes/origin/HEAD | sed 's@^refs/remotes/origin/@@')
+}
+
 # Network
 
 # whois a domain or a URL

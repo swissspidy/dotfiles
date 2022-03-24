@@ -65,7 +65,6 @@ alias update_all="brew_update; mas upgrade; softwareupdate -i; npm install npm -
 alias g="git"
 alias gti="git"
 alias status="git fetch && git status"
-alias main="git checkout $(git symbolic-ref refs/remotes/origin/HEAD | sed 's@^refs/remotes/origin/@@')"
 
 # Undo a `git push`
 alias undopush="git push -f origin HEAD^:master"
