@@ -1,0 +1,16 @@
+# See https://typicode.github.io/husky/#/?id=command-not-found
+
+# nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
+# Make Composer itself available.
+export PATH="/usr/local/bin:$PATH"
+
+# Globally installed Composer packages.
+export PATH="~/.composer/vendor/bin:$PATH"
+
+# Homebrew-installed PHP.
+export PATH="/opt/homebrew/opt/php@8.0/bin:$PATH"
+export PATH="/opt/homebrew/opt/php@8.0/sbin:$PATH"
+eval "$(/opt/homebrew/bin/brew shellenv)"
