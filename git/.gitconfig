@@ -151,3 +151,9 @@
 	# use separate file for username / github token / etc.
 	# at the end so it can override any of the above configs
 	path = ~/.gitconfig.local
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
