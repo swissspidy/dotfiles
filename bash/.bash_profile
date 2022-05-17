@@ -56,3 +56,6 @@ export NVM_DIR="$HOME/.nvm"
 
 # Autocorrect typos in path names when using `cd`
 shopt -s cdspell;
+
+# Remove colon from the list of word breaking characters. Fixes issues with npm script bash completion.
+export COMP_WORDBREAKS=${COMP_WORDBREAKS//:}
