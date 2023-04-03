@@ -14,8 +14,8 @@ export BASH_SILENCE_DEPRECATION_WARNING=1
 [[ -s "$HOME/.profile" ]] && . "$HOME/.profile"
 
 # Bash completion
-if which brew > /dev/null && [ -f "$(brew --prefix)/etc/bash_completion" ]; then
-    . $(brew --prefix)/etc/bash_completion
+if which brew > /dev/null && [[ -r "$(brew --prefix)/etc/profile.d/bash_completion.sh" ]]; then
+    . "$(brew --prefix)/etc/profile.d/bash_completion.sh"
 fi;
 
 # WP-CLI completion
@@ -59,3 +59,6 @@ shopt -s cdspell;
 
 # Remove colon from the list of word breaking characters. Fixes issues with npm script bash completion.
 export COMP_WORDBREAKS=${COMP_WORDBREAKS//:}
+
+# Rust
+[[ -s "$HOME/.cargo/env" ]] && . "$HOME/.cargo/env"
