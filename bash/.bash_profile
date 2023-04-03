@@ -62,3 +62,8 @@ export COMP_WORDBREAKS=${COMP_WORDBREAKS//:}
 
 # Rust
 [[ -s "$HOME/.cargo/env" ]] && . "$HOME/.cargo/env"
+
+if [ -f ~/Workspace/GitHub/emsdk/emsdk_env.sh ]; then
+    export EMSDK_QUIET=1
+    . ~/Workspace/GitHub/emsdk/emsdk_env.sh
+fi;
