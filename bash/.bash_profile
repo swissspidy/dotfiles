@@ -49,6 +49,13 @@ if [ -f /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.
     . /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc
 fi;
 
+# Emscripten
+# Run before nvm so nvm takes precedence
+if [ -f ~/Workspace/GitHub/emsdk/emsdk_env.sh ]; then
+    export EMSDK_QUIET=1
+    . ~/Workspace/GitHub/emsdk/emsdk_env.sh
+fi;
+
 # nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -62,8 +69,3 @@ export COMP_WORDBREAKS=${COMP_WORDBREAKS//:}
 
 # Rust
 [[ -s "$HOME/.cargo/env" ]] && . "$HOME/.cargo/env"
-
-if [ -f ~/Workspace/GitHub/emsdk/emsdk_env.sh ]; then
-    export EMSDK_QUIET=1
-    . ~/Workspace/GitHub/emsdk/emsdk_env.sh
-fi;
