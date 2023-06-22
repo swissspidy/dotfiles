@@ -14,9 +14,20 @@ export BASH_SILENCE_DEPRECATION_WARNING=1
 [[ -s "$HOME/.profile" ]] && . "$HOME/.profile"
 
 # Bash completion
-if which brew > /dev/null && [[ -r "$(brew --prefix)/etc/profile.d/bash_completion.sh" ]]; then
-    . "$(brew --prefix)/etc/profile.d/bash_completion.sh"
-fi;
+# From https://docs.brew.sh/Shell-Completion
+if type brew &>/dev/null
+then
+  HOMEBREW_PREFIX="$(brew --prefix)"
+  if [[ -r "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh" ]]
+  then
+    source "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh"
+  else
+    for COMPLETION in "${HOMEBREW_PREFIX}/etc/bash_completion.d/"*
+    do
+      [[ -r "${COMPLETION}" ]] && source "${COMPLETION}"
+    done
+  fi
+fi
 
 # WP-CLI completion
 # From https://raw.githubusercontent.com/wp-cli/wp-cli/master/utils/wp-completion.bash
