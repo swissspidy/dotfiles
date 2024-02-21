@@ -1,18 +1,14 @@
 {
     "name": "swissspidy/global-packages",
     "require": {
-        "dealerdirect/phpcodesniffer-composer-installer": "^0.7.0",
         "ergebnis/composer-normalize": "^2.11",
-        "psy/psysh": "@stable",
-        "wearerequired/composer-scripts": "^0.2.0"
+        "psy/psysh": "@stable"
     },
     "config": {
         "process-timeout": 7200,
         "sort-packages": true,
         "allow-plugins": {
-            "dealerdirect/phpcodesniffer-composer-installer": true,
-            "ergebnis/composer-normalize": true,
-            "wearerequired/composer-scripts": true
+            "ergebnis/composer-normalize": true
         }
     },
     "minimum-stability": "dev",
