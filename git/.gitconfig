@@ -92,6 +92,10 @@
 [diff "podiff"]
 	command = /opt/homebrew/bin/podiff -D-u -L
 
+[diff "lockb"]
+	textconv = bun
+	binary = true
+
 [fetch]
 	prune = true
 
