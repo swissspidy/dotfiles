@@ -67,6 +67,10 @@ if [ -f ~/Workspace/GitHub/emsdk/emsdk_env.sh ]; then
     . ~/Workspace/GitHub/emsdk/emsdk_env.sh
 fi;
 
+# pnpm
+export PNPM_HOME="/Users/pascalb/Library/pnpm"
+export PATH="$PNPM_HOME/bin:$PATH"
+
 # nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
