@@ -89,3 +89,6 @@ export COMP_WORDBREAKS=${COMP_WORDBREAKS//:}
 
 # Rust
 [[ -s "$HOME/.cargo/env" ]] && . "$HOME/.cargo/env"
+
+# Holds WP-CLI and such.
+export PATH="$PATH:/Users/pascalb/.local/bin"
