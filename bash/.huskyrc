@@ -4,6 +4,10 @@
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
+# phpvm
+export PHPVM_DIR="/Users/pascalb/.phpvm"
+[ -s "$PHPVM_DIR/phpvm.sh" ] && . "$PHPVM_DIR/phpvm.sh"
+
 # Make Composer itself available.
 export PATH="/usr/local/bin:$PATH"
 
