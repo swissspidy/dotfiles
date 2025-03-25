@@ -60,6 +60,9 @@ if [ -f /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.
     . /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc
 fi;
 
+# Homebrew gpatch support
+export PATH="/opt/homebrew/opt/gpatch/libexec/gnubin:$PATH"
+
 # Emscripten
 # Run before nvm so nvm takes precedence
 if [ -f ~/Workspace/GitHub/emsdk/emsdk_env.sh ]; then
