@@ -79,7 +79,7 @@ export NVM_DIR="$HOME/.nvm"
 # phpvm
 export PHPVM_DIR="/Users/pascalb/.phpvm"
 export PATH="$PHPVM_DIR/bin:$PATH"
-[ -s "$PHPVM_DIR/phpvm.sh" ] && . "$PHPVM_DIR/phpvm.sh"
+# [ -s "$PHPVM_DIR/phpvm.sh" ] && . "$PHPVM_DIR/phpvm.sh"
 
 # Autocorrect typos in path names when using `cd`
 shopt -s cdspell;
