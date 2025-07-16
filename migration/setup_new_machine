@@ -91,4 +91,7 @@ curl -o ../bin/wp-completion.bash https://raw.githubusercontent.com/wp-cli/wp-cl
 (cd .. && stow git)
 (cd .. && stow composer)
 
+
+(cd .. && stow -t ~/.gemini gemini)
+
 # add manual symlink for assh config

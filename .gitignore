@@ -5,3 +5,5 @@ git/.gitconfig.local
 /composer/.composer
 !composer/.composer/composer.json
 !composer/.composer/config.json
+gemini/*
+!gemini/GEMINI.md
