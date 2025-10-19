@@ -106,3 +106,33 @@ export PATH="$PATH:/Users/pascalb/.local/bin"
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
+# Command not found handler
+
+command_not_found_handle() {
+  # If the command has 3 or more words, pass it to Gemini's interactive prompt.
+  if [ "$#" -ge 3 ]; then
+    gemini --prompt-interactive="$*"
+    return $?
+  fi
+
+  # Otherwise, attempt to use Homebrew's command-not-found handler.
+  local HOMEBREW_COMMAND_NOT_FOUND_HANDLER
+  # Check if the 'brew' command exists before trying to use it.
+  if command -v brew >/dev/null; then
+    HOMEBREW_COMMAND_NOT_FOUND_HANDLER="$(brew --repository)/Library/Homebrew/command-not-found/handler.sh"
+    if [ -f "$HOMEBREW_COMMAND_NOT_FOUND_HANDLER" ]; then
+      source "$HOMEBREW_COMMAND_NOT_FOUND_HANDLER"
+    fi
+  fi
+
+  # After attempting to source the handler, check if the function is now defined.
+  if declare -f "homebrew_command_not_found_handle" >/dev/null; then
+    # If it exists, call it with the original command and arguments.
+    homebrew_command_not_found_handle "$*"
+    return $?
+  else
+    # If the Homebrew handler isn't available, print a standard error.
+    printf "bash: %s: command not found\n" "$1" >&2
+    return 127
+  fi
+}
