@@ -47,11 +47,6 @@ if [ -f ~/dotfiles/bin/git-completion.bash ]; then
   . ~/dotfiles/bin/git-completion.bash
 fi
 
-# Wakatime
-if [ -f ~/Workspace/GitHub/bash-wakatime/bash-wakatime.sh ]; then
-    . ~/Workspace/GitHub/bash-wakatime/bash-wakatime.sh;
-fi;
-
 # rupa/z
 if which brew > /dev/null && [ -f "$(brew --prefix)/etc/profile.d/z.sh" ]; then
     . "$(brew --prefix)/etc/profile.d/z.sh";
