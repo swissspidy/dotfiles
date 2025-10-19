@@ -101,3 +101,8 @@ export COMP_WORDBREAKS=${COMP_WORDBREAKS//:}
 
 # Holds WP-CLI and such.
 export PATH="$PATH:/Users/pascalb/.local/bin"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
