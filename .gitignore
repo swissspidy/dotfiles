@@ -1,4 +1,5 @@
 bash/.extra
+bin/composer-completion.bash
 bin/git-completion.bash
 bin/wp-completion.bash
 git/.gitconfig.local

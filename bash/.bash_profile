@@ -35,6 +35,12 @@ if [ -f ~/dotfiles/bin/wp-completion.bash ]; then
     . ~/dotfiles/bin/wp-completion.bash;
 fi;
 
+# Composer completion
+# From https://getcomposer.org/doc/03-cli.md#bash-completions
+if [ -f ~/dotfiles/bin/composer-completion.bash ]; then
+    . ~/dotfiles/bin/composer-completion.bash;
+fi;
+
 # Git completion
 # From https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
 if [ -f ~/dotfiles/bin/git-completion.bash ]; then
