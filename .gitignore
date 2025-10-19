@@ -7,3 +7,4 @@ git/.gitconfig.local
 !composer/.composer/config.json
 gemini/*
 !gemini/GEMINI.md
+nano-syntax-highlighting
