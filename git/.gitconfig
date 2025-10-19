@@ -150,11 +150,11 @@
 [pull]
 	rebase = true
 
-[url "git@github.com:"]
-	pushInsteadOf = "https://github.com/"
-
+# Pushes to GitHub use SSH, pulls use HTTPS.
 [url "https://github.com/"]
-	pullInsteadOf = "git@github.com":
+	insteadOf = git@github.com:
+[url "git@github.com:"]
+	pushInsteadOf = https://github.com/
 
 [include]
 	# use separate file for username / github token / etc.
