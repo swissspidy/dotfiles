@@ -106,6 +106,7 @@
 
 [gpg]
 	program = /usr/local/bin/gpg
+	format = openpgp
 
 [help]
 	# correct typos
