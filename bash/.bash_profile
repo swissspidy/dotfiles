@@ -72,7 +72,7 @@ if [ -f ~/Workspace/GitHub/emsdk/emsdk_env.sh ]; then
 fi;
 
 # pnpm
-export PNPM_HOME="/Users/pascalb/Library/pnpm"
+export PNPM_HOME="$HOME/Library/pnpm"
 export PATH="$PNPM_HOME/bin:$PATH"
 
 # nvm
@@ -81,7 +81,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # phpvm
-export PHPVM_DIR="/Users/pascalb/.phpvm"
+export PHPVM_DIR="$HOME/.phpvm"
 export PATH="$PHPVM_DIR/bin:$PATH"
 # [ -s "$PHPVM_DIR/phpvm.sh" ] && . "$PHPVM_DIR/phpvm.sh"
 
@@ -95,7 +95,7 @@ export COMP_WORDBREAKS=${COMP_WORDBREAKS//:}
 [[ -s "$HOME/.cargo/env" ]] && . "$HOME/.cargo/env"
 
 # Holds WP-CLI and such.
-export PATH="$PATH:/Users/pascalb/.local/bin"
+export PATH="$PATH:$HOME/.local/bin"
 
 # bun
 export BUN_INSTALL="$HOME/.bun"

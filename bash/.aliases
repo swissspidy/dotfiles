@@ -45,7 +45,7 @@ fi;
 alias flush="dscacheutil -flushcache"
 
 # Homebrew
-alias cask="brew cask"
+alias cask="brew install --cask"
 alias brwe=brew
 
 # Convenience
@@ -58,7 +58,7 @@ alias cleanup="find . -name '*.DS_Store' -type f -ls -delete"
 alias diskspace_report="df -P -kHl"
 
 # Update all the things
-alias brew_update="brew -v update; brew upgrade --force-bottle --cleanup; brew cleanup; brew cask cleanup; brew prune; brew doctor; npm-check -g -u"
+alias brew_update="brew -v update; brew upgrade; brew cleanup; brew doctor; npm-check -g -u"
 alias update_all="brew_update; mas upgrade; softwareupdate -i; npm install npm -g; npm update -g; sudo gem update --system; sudo gem update --no-document"
 
 # Git

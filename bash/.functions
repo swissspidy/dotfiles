@@ -40,6 +40,7 @@ whois() {
 	/usr/bin/whois $domain | sed '/NOTICE:/q'
 }
 
+# NOTE: Requires GNU sed (e.g. via homebrew and added to PATH in .extra)
 localip(){
 	function _localip(){ echo "📶  "$(ipconfig getifaddr "$1"); }
 	export -f _localip
